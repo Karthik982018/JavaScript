@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <script src="https://student.csc.liv.ac.uk/~sgkvaliy/game.js"></script>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1>Dice game!</h1>
+    </header>
+    <main>
+    <section  id="section1">
+        <h2>please enter the number of dice between 3 to 6 to play!</h2>
+        <form>
+            <input type="text" name="numDice" id="numDice">
+            <button type="button" onclick="ValidateUserInput(document.getElementById('numDice').value,document.getElementById('table'),document.getElementById('message'))">Confirm</button>
+
+        </form>
+
+    </section>
+
+    <section  id="section2" >
+        <h2>Lets roll  the dice</h2>
+        <button id="playButton" onclick="play()">Roll</button>
+
+
+
+
+        
+        <table id="table"><tr><td></td></tr></table>
+    </section>
+
+    <div id="message"></div>
+    <div id="scoreCard"></div>
+    <section id="section3">
+        <h2>Do you want to continue</h2>
+        <button type="button" onclick="continueGame()">Continue</button>
+        <button type="button" onclick="endGame()">End Game</button>
+
+    </section>
+    <section id="result">
+        <h2>Round Played</h2>
+        <div id="round"></div>
+        <h2>Total Score</h2>
+        <div id="totalScore"></div>
+        <button type="button" onclick="playAgain()">Play Again</button>
+
+    </section>
+    </main>
+    
+    <footer>
+        <p>All Dice images &copy; https://game-icons.net/</p>
+    </footer>
+
+
+    
+    
+    
+</body>
+</html>
